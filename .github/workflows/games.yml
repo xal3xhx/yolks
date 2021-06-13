@@ -4,7 +4,7 @@ on:
     - cron: "0 0 * * 1"
   push:
     branches:
-      - master
+      - develop
     paths:
       - games/**
 jobs:
@@ -35,4 +35,4 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/parkervcp/games:${{ matrix.game }}
+            ghcr.io/parkervcp/yolks:games_${{ matrix.game }}
